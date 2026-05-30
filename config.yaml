@@ -1,0 +1,13 @@
+name: LCUS Relay
+version: "1.0.0"
+slug: lcus_relay
+
+uart: true
+
+options:
+  serial_port: "/dev/serial/by-id/usb-1a86_USB_Serial-if00-port0"
+  poll_interval: 10
+
+schema:
+  serial_port: str
+  poll_interval: int
