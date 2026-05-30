@@ -6,8 +6,5 @@ RUN apk add --no-cache \
     py3-pyserial
 
 COPY rootfs/app /app
-COPY run.sh /
 
-RUN chmod +x /run.sh
-
-CMD ["/run.sh"]
+CMD ["python3", "/app/lcus.py"]
