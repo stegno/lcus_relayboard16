@@ -1,0 +1,30 @@
+name: LCUS Relay Board 16
+version: "1.0.0"
+slug: lcus_relay
+description: MQTT bridge for LCUS T73 X16 relay board
+url: https://github.com/YOUR_GITHUB/lcus_relayboard16
+
+startup: services
+boot: auto
+
+uart: true
+
+homeassistant_api: true
+
+services:
+  - mqtt:need
+
+options:
+  serial_port: "/dev/serial/by-id/usb-1a86_USB_Serial-if00-port0"
+  poll_interval: 10
+
+schema:
+  serial_port: str
+  poll_interval: int
+
+arch:
+  - amd64
+  - aarch64
+  - armv7
+  - armhf
+  - i386
